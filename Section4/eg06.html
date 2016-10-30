@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blob对象使用示例</title>
+    <script language="JavaScript">
+        function ShowFileType() {
+            //得到用户选择的第一个文件
+            var file = document.getElementById("file").files[0];
+            var size = document.getElementById("size");
+            var type = document.getElementById("type");
+            //显示字节长度
+            size.innerHTML = file.size;
+
+            //显示文件类型
+            type.innerHTML = file.type;
+        }
+
+        function FileUpload() {
+            var file;
+            for(var i=0;i<document.getElementById("file").files.length;i++) {
+                file = document.getElementById("file").files[i];
+                if (! /image\/\w+/.test(file.type)) {
+                    alert(file.name + "不是图像文件！");
+                    break;
+                } else {
+                    alert(file.name + "文件上传");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+选择文件:
+<input type="file" id="file" multiple /><br />
+<input type="file" id="file1" accept="image/*" /><br />
+<input type="button" value="显示文件信息" onclick="FileUpload();"/><br/>
+文件字节长度:<span id="size"></span><br/>
+文件类型：<span id="type"></span>
+</body>
+</html>

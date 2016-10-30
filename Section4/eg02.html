@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单验证</title>
+    <script language="javascript">
+        function check() {
+            var email = document.getElementById("email");
+            if (email.value=="") {
+                alert("请输入Email地址!");
+                return false;
+            } else if(!email.checkValidity()) {
+                alert("请输入正确的Email地址!");
+            }else {
+                alert("输入Email正确！");
+            }
+        }
+    </script>
+</head>
+<body>
+<!--
+<form method="post">
+    <input name="text" type="text" required pattern="^\w.*$" >
+    <input type="submit" >
+</form>
+-->
+<form id="testform" onsubmit="return check();">
+    <label for="email">Email:</label>
+    <input name="email" id="email" type="email" /><br />
+    <input type="submit" />
+</form>
+</body>
+</html>

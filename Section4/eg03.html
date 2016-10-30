@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义错误信息示例</title>
+    <script language="javascript">
+        function check() {
+            var pass1 = document.getElementById("pass1");
+            var pass2 = document.getElementById("pass2");
+            var email = document.getElementById("email");
+
+            if (pass1.value == "") {
+                pass1.setCustomValidity("密码不能为空!");
+                alert("密码不能为空11!");
+            }
+
+            if (pass2.value == "") {
+                pass2.setCustomValidity("确认密码不能为空！");
+                alert("");
+            }
+
+            if (pass1.value != pass2.value) {
+                pass2.setCustomValidity("密码不一致!");
+            }else {
+                pass2.setCustomValidity("");
+            }
+
+            if (!email.checkValidity()) {
+                email.setCustomValidity("请输入正确的Email地址！")
+            }
+        }
+    </script>
+</head>
+<body>
+<figure>
+    <figcaption>漂亮女孩</figcaption>
+    <img src="../img/4.jpg" alt="漂亮女孩" />
+</figure>
+<form id="testform" onsubmit="return check();">
+    密码:<input type="password" name="pass1" id="pass1" /><br />
+    确认密码:<input type="password" name="pass2" id="pass2" /><br />
+    Email:<input type="email" name="email" id="email" /> <br />
+    <input type="submit" value="提交" />
+</form>
+</body>
+</html>

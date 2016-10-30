@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>progress元素的使用示例</title>
+    <script language="JavaScript">
+        var progressBar = document.getElementById('p');
+
+        function button_onclick() {
+            var progressBar = document.getElementById('p');
+            progressBar.getElementsByTagName('span')[0].textContent = "0";
+            for (var i = 0; i <= 100; i++) {
+                updateProgress(i)
+            }
+        }
+        function updateProgress(newValue) {
+            var progressBar = document.getElementById('p');
+            progressBar.value = newValue;
+            progressBar.getElementsByTagName('span')[0].textContent = newValue;
+        }
+    </script>
+</head>
+<body>
+<section>
+    <h2>progress元素的使用示例</h2>
+    <p>完成百分比:
+        <progress id="p" max="100"><span>0</span>%</progress>
+    </p>
+    <input type="button" onclick="button_onclick()" value="请点击"/>
+    <hr/>
+</section>
+<section>
+    <p>磁盘使用量:
+        <meter value="40" min="0" max="160"></meter>
+        GB
+    </p>
+    <p>你的得分是:
+        <meter value="93" min="0" max="100" low="40" high="90" optimum="100"></meter>
+    </p>
+</section>
+<hr />
+<section>
+    <h3>ol列表的start属性示例</h3>
+    <ol start="5" reversed>
+        <li>列表内容5</li>
+        <li>列表内容6</li>
+        <li>列表内容7</li>
+        <li>列表内容8</li>
+    </ol>
+</section>
+</body>
+</html>
