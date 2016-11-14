@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>coverflow-demo</title>
+    <style>
+        div.innerWrapper {
+            perspective: 300px;
+            width: 600px;
+            height: 300px;
+            margin: 100px auto;
+            display: flex;
+            align-items: flex-start;
+            background-color: #000;
+            overflow: hidden;
+            padding-top: 5%;
+        }
+
+        div.cover {
+            height: 50%;
+            flex-grow: 1;
+            transition: all .5s ease;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            margin: 0;
+            /*-webkit-box-reflect: below 5% linear-gradient(transparent,white);*/
+            border: 1px solid #fff;
+        }
+
+        div.cover:nth-child(1) {
+            background-image: url('img/1.jpg');
+        }
+
+        div.cover:nth-child(2) {
+            background-image: url('img/2.jpg');
+        }
+
+        div.cover:nth-child(3) {
+            background-image: url('img/3.jpg');
+        }
+
+        div.cover:nth-child(4) {
+            background-image: url('img/4.jpg');
+        }
+
+        div.cover:nth-child(5) {
+            background-image: url('img/5.png');
+        }
+
+        div.cover:nth-child(6) {
+            background-image: url('img/6.png');
+        }
+        div.cover:nth-child(7) {
+            background-image: url('img/7.jpg');
+        }
+
+        button[required="required"] {
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="innerWrapper">
+        <div class="cover"></div>
+        <div class="cover"></div>
+        <div class="cover"></div>
+        <div class="cover"></div>
+        <div class="cover"></div>
+        <div class="cover"></div>
+        <div class="cover"></div>
+    </div>
+</div>
+<button required="required">222</button>
+</body>
+</html>
