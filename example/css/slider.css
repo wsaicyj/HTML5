@@ -1,4 +1,49 @@
 .slider--el {
     z-index: 1;
     position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform 2.8s,z-index 0.1s;
+    transition: transform 2.8s,z-index 0.1s;
+    overflow: hidden;
+}
+.slider--el.anim-4parts .part {
+    position: absolute;
+    width: 50.2%;
+    height: 50.2%;
+    ov-change:transform;
+}
+
+.slider--el.anim-4parts .part:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-size: cover;
+    width: 200%;
+    height: 200%;
+    background-image：url('img/1.jpg');
+}
+
+.slider--el.anim-4parts .part .top {
+    top: 0;
+    -webkit-transition: -webkit-transform 1.3s 0.3s;
+    transition: transoform 1.3s 0.3s;
+}
+
+.slider--el.anim-4parts .part .top:before {
+    top: 0;
+}
+
+.slider--el.anim-4parts .left {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.slider--el.anim-4parts .right {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translate(100%);
 }

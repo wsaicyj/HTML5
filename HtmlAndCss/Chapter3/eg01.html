@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建页眉</title>
+</head>
+<body>
+<div class="container">
+    <header role="banner">
+        <nav role="navigation">
+            <ul title="Table of Contents">
+                <li><a href="http://www.baidu.com">百度</a></li>
+                <li><a href="http://www.qq.com">腾讯</a></li>
+                <li><a href="http://www.taobao.com">淘宝</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main role="main">
+        <article>
+            <header>
+                <h1>回答有奖活动</h1>
+                <nav>
+                    <li><a href="#answer1">1+1等于几？</a></li>
+                    <li><a href="#answer2">1+2等于几？</a></li>
+                </nav>
+            </header>
+
+            <article id="answer1">
+                <h2>问题1答案</h2>
+                <p>1+1等于2</p>
+                <footer>
+                    <p>回答者:Aaron</p>
+                    <address>联系电话:1380000001</address>
+                </footer>
+                <section>
+                    <h2>解题时间</h2>
+                    <article>
+                        <footer>
+                            于
+                            <time datetime="2016-11-15">2016/11/15</time>
+                            日将题解答出来.
+                        </footer>
+                    </article>
+                </section>
+            </article>
+
+            <article id="answer2">
+                <h2>问题2答案</h2>
+                <p>1+2等于3</p>
+            </article>
+        </article>
+    </main>
+
+    <div class="sidebar">
+        <aside role="complementary">
+            <h1>看看谁答得最快</h1>
+            <p>以下人员答得最快:</p>
+            <nav>
+                <ul>
+                    <li>小陈</li>
+                    <li>中陈</li>
+                    <li>老陈</li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+
+    <footer role="contentinfo">
+        <h1>页脚</h1>
+        <p>&copy;Copyright All About Aaron</p>
+    </footer>
+</div>
+</body>
+</html>
