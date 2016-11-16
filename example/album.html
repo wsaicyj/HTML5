@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <title>3D旋转木马相册</title>
     <link href="css/album.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.js"></script>
+    <script type="text/javascript">
+        var transform = function(element,value,key) {
+            key = key||"Transform";
+            ["Moz","O","Webkit",""].forEach(function(prefix) {
+                element.style[prefix + key] = value;
+            })
+            alert(value);
+            return element;
+        }
+        $(function(){
+            var deg = 40,i = 1;
+            $("#container").click(function(){
+                transform($(this)[0],"rotateY(" + (deg*i++) + "deg")
+            });
+        });
+
+    </script>
 </head>
 <body>
 <div id="stage">
