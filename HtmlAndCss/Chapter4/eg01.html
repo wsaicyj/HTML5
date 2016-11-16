@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>文本</title>
+    <link href="eg01.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div class="container">
@@ -23,6 +24,8 @@
                 <nav>
                     <li><a href="#answer1">1+1等于几？</a></li>
                     <li><a href="#answer2">1+2等于几？</a></li>
+                    <li><a href="#answer3">10<sup>2</sup>等于几?</a></li>
+                    <li><a href="#answer4">H<sub>2</sub>O指的是什么？</a></li>
                 </nav>
             </header>
 
@@ -53,24 +56,50 @@
         </article>
 
         <article>
-        <figure>
-            <figcaption><b>休息时间：</b>
-                请欣赏美丽图片</figcaption>
-
-            <img src="../../img/1.jpg" width="180" height="143" alt="美丽图片" />
-        </figure>
+            <h2>解答出题目的人数比</h2>
+            <p>题目一:<meter value="0.8">80%的人已完成</meter></p>
+            <p>题目二:<meter value="0.1" low="0.25" hight="0.75" optimum="0">30%的人已完成</meter></p>
+            <p>题目三:<meter>没人完成</meter></p>
+            <p>题目四:<meter value="5.5" min="0" max="13.1" title="Miles">100%的人已完成</meter></p>
+            <h2>完成进度比</h2>
+            <p>当前进度:<progress max="100" value="30">30% save</progress></p>
         </article>
+
+        <article>
+            <figure>
+                <figcaption><b>休息时间：</b>
+                    请欣赏美丽图片
+                </figcaption>
+
+                <img src="../../img/1.jpg" width="180" height="143" alt="美丽图片"/>
+            </figure>
+        </article>
+
+        <article>
+            <h1>解题公开时间</h1>
+            <ol>
+                <li>2016年11月16号</li>
+                <li>
+                    <ins>2016年11月17号</ins>
+                </li>
+                <li><s>2016年11月18号</s></li>
+                <li>
+                    <del>2016年11月19号</del>
+                </li>
+            </ol>
+        </article>
+
     </main>
 
     <div class="sidebar">
         <aside role="complementary">
             <h1>看看谁答得最快</h1>
-            <p>以下人员答得最快:</p>
+            <p><cite>以下人员答得最快:</cite></p>
             <nav>
                 <ul>
-                    <li>小陈</li>
-                    <li>中陈</li>
-                    <li>老陈</li>
+                    <li><abbr title="陈帅哥">小陈</abbr></li>
+                    <li>中陈(<q><dfn>陈靓仔</dfn></q>)</li>
+                    <li><mark>老陈</mark></li>
                 </ul>
             </nav>
         </aside>
@@ -78,7 +107,16 @@
 
     <footer role="contentinfo">
         <h1>页脚</h1>
-        <p><small>&copy;Copyright All About Aaron</small></p>
+        <p>
+            <small>&copy;Copyright All About Aaron</small>
+        </p>
+        <pre>
+        <code>
+            abbr[title] {
+            border-bottom: 1px dotted #000;
+            }
+        </code>
+        </pre>
     </footer>
 </div>
 </body>
