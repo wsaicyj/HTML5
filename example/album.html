@@ -7,17 +7,19 @@
     <script src="js/jquery.js"></script>
     <script type="text/javascript">
         var transform = function(element,value,key) {
+//            alert(element);
             key = key||"Transform";
             ["Moz","O","Webkit",""].forEach(function(prefix) {
+                alert(prefix+key);
                 element.style[prefix + key] = value;
             })
-            alert(value);
+//            alert(value);
             return element;
         }
         $(function(){
             var deg = 40,i = 1;
             $("#container").click(function(){
-                transform($(this)[0],"rotateY(" + (deg*i++) + "deg")
+                transform($(this)[0],"rotateY(" + (deg*i++) + "deg)")
             });
         });
 
