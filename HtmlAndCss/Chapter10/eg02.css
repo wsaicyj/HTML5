@@ -1,0 +1,16 @@
+body {
+    background-color: #88b2d2;
+    background-image: url(../../img/1.jpg);
+    background-repeat:no-repeat;
+    background-position: center top;
+    background-attachment: scroll;
+}
+
+h2 {
+    background-color: #7d717c;
+}
+
+#chapter p {
+    color: #e10000;  //设置字体颜色
+    padding: 1px 1.875em .7em;
+}
