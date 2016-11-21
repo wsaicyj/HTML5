@@ -1,5 +1,7 @@
+
+
 #kwicks {
-    width: 590px;
+    width: 900px;
     overflow-x: hidden;
 }
 
@@ -14,5 +16,33 @@
 }
 
 #kwicks li:hover a {
-    width: 258px !important;
+    width: 400px !important;
+}
+
+#kwicks li a {
+    display: block;
+    text-indent: -9999px;
+    width: 134px;
+    height: 143px;
+    transition-property: width;
+    transition-duration: 1s;
+    border: 1px solid #ff6914;
+    -webkit-transition-property: width;
+    -webkit-transition-duration: .5s;
+}
+
+.photo1 {
+    background: url(../../img/6.png) no-repeat 0;
+}
+
+.photo2{
+    background: url(../../img/6.png) no-repeat 0;
+}
+
+.photo3 {
+    background: url(../../img/6.png) no-repeat 0;
+}
+
+.photo4 {
+    background: url(../../img/6.png) no-repeat 0;
 }

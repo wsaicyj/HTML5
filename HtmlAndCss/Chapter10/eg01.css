@@ -1,7 +1,19 @@
 body {
     font-family: Serif,Geneva,sans-serif,Arial;
+    font-size: 100%;
 }
 
 h1,h2 {
     font-family: serif,"Gill Sans MT",sans-serif,Arial;
+}
+
+.chapter {
+    /*font-weight: bold;  //应用粗体格式*/
+    /*font-style:italic;  //应用斜体格式*/
+    /*line-height: 1.5; //设置行高*/
+    font: italic bold 1.5em/1.3 serif; //设置所有字体值的步骤【字型 粗细 字体大小/行高 字体】
+}
+
+#answer2 p {
+    font-size: 1.5em;  //设置字体大小
 }

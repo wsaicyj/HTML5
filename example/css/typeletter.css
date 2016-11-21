@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle, #444,#000,#333);
+    /*background-color: #000;*/
+}
+
+#char {
+    font-size: 400px;
+    color: lightgreen;
+    text-shadow: 0 0 30px #888;
+}
+
+#result {
+    font-size: 50px;
+    color: #888;
+}
+
+#char.error {
+    color: red;
+}
