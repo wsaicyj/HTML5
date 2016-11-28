@@ -6,19 +6,71 @@ main {
     width: 300px;
 }
 
-
-.default {
-    border-width: 10px;
-    padding: 15px;
-    width: 300px;
-    background-color: green;
-    margin-bottom: 50px;
+.about {
+    background-color: #2b2b2b;
+    padding: 5px 10px 10px;
+    color: #bebebe;
+    /*border: 1px solid red;*/
+    text-indent: 15px; /* 缩进 */
 }
 
-.box-size {
-    box-sizing: border-box;
-    border-width: 10px;
-    padding: 15px;
-    width: 300px;
-    background-color: red;
+.about img {
+    border: 5px solid #bebebe;
+
 }
+
+.nav-main {
+    border-top: 5px solid #019443;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 7px 0 8px;
+}
+
+.nav-main li {
+    border-left: 1px solid #c8c8c8;
+    display: inline-block;
+}
+
+.nav-main li:first-child {
+    border-left: none;
+}
+
+.nav-main a {
+    color: #292929;
+    display: inline-block;
+    /*font-size: 18px;*/
+    font-size: 1.125em;
+    font-weight: 700;
+    /*padding: 9px 20.7px 9px 25.2px;*/
+    padding: .5em 1.15em .5em 1.4em;
+    cursor: pointer;
+}
+
+.about h2,.mod h2 {
+    font-size: 0.875em;
+}
+
+.about h2,.mod h2,.nav-main a {
+    font-weight: 700;
+}
+
+.mod h2 {
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: .75em;
+}
+
+.links {
+    padding-left: 0;
+    width: 270px;
+}
+
+.post-footer {
+    border-bottom: 1px solid #dbdbdb;
+    border-top: 1px solid #dbdbdb;
+    padding-bottom: 7.7px;
+    padding-top: 7.7px;
+}
+
+.footer p {
+    font-size: 11px;
+}
+
