@@ -14,11 +14,12 @@
 
 .social-site li {
     display: inline-block;
+    padding: 5px;
 }
 
 .masthead .social-site {
     position: absolute;
-    top: 41px;
+    top: 5px;
     right: 0;
 }
 
@@ -79,6 +80,7 @@ h1 {
     border-top: 5px solid #019443;
     border-bottom: 1px solid #c8c8c8;
     padding: 7px 0 8px;
+    /*position: fixed;*/
 }
 
 .nav-main li {
@@ -99,6 +101,14 @@ h1 {
     /*padding: 9px 20.7px 9px 25.2px;*/
     padding: .5em 1.15em .5em 1.4em;
     cursor: pointer;
+    text-decoration: none;  /* 去掉a标签下划线 */
+
+}
+
+.nav-main .current-page,
+.nav-main .current-page:hover {
+    color: #747474;
+    /*cursor: pointer;*/
 }
 
 .about h2,.mod h2 {
