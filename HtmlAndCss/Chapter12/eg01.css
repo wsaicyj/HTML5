@@ -1,0 +1,47 @@
+/* 媒体查询里的媒体特性 */
+/*
+ width（宽度）
+ height（高度）
+ device-width（设备宽度）
+ device-height（设备高度）
+ orientation（方向）
+ aspect-ratio（高宽比）
+ device-aspect-ratio（设备高宽比）
+ color（颜色）
+ color-index（颜色数）
+ monochrome（单色）
+ resolution（分辨率）
+ scan（扫描）
+ grid（栅格）
+   -webkit-device-pixel-ratio（WebKit设备像素比:WebKit是Chrome、Safari等浏览器使用的网页引擎和JavaScript引擎开源程序）
+ -moz-device-pixel-ratio（Mozilla设备像素比:Mozilla是Firefox等浏览器的基础程序。）
+*/
+
+
+.page {
+    max-width: 60em;
+}
+
+main {
+    /* 要求宽度/包含块宽度使用600px/960px */
+    width: 62.5%;
+}
+
+.sidebar {
+    /* 300px/960px */
+    width: 31.25%;
+}
+
+p {
+    color: green;
+}
+
+
+@media only screen and (min-width: 480px) {
+    p {
+        color: red;
+        font-weight: bold;
+    }
+}
+
+

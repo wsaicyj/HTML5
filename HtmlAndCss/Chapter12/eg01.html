@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>硇洲岛</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link href="../normalize.css" rel="stylesheet"/>
-    <link href="eg01.css" rel="stylesheet"/>
+    <!--media实现媒体查询-->
+    <link href="eg01.css" rel="stylesheet" media="screen"/>
+    <!--仅当媒体类型为screen 且视觉区域最小宽度为480像素时，加载并使用styles-480.css 中的样式规则-->
+    <link rel="stylesheet" media="only screen and (min-width:480px)" href="styles-480.css" />
 </head>
 <body>
 <div class="page">
