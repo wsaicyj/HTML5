@@ -1,0 +1,117 @@
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    background: #f2f2f2;
+    -webkit-font-smoothing: antialiased;
+    font-size: 100%;
+}
+
+ul,div {
+    position: relative;
+    margin: 3.125em auto; /*50px*/
+    width: 44.375em;   /*710px*/
+    padding: 0;
+    list-style: none;
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 1.25em; /*20px*/
+    line-height: 40px; /*40px*/
+    color: #555;
+}
+
+h1 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 710px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 1em;
+    z-index: -1;
+}
+
+img {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 1px;
+    box-shadow: 0 0 0 4px #fff;
+    cursor: pointer;
+}
+
+li {
+    position: relative;
+    margin: 10px;
+    width: 157px;
+    height: 157px;
+    float: left;
+}
+
+/* button */
+button {
+    height: 45px;
+    margin: 0 7px;
+    padding: 5px 0;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #fff;
+    border: 0;
+    border-radius: 2px;
+    text-transform: capitalize;
+    outline: 0;
+}
+
+button.select {
+    float: left;
+    background: #435a6b;
+    cursor: pointer;
+    width: 150px;
+}
+
+button.send {
+    float: right;
+    background: #aaa;
+    padding: 0px 15px;
+    transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    -ms-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -webkit-transition: 0.3s linear;
+}
+
+button.send.selected {
+    background: #00c09e;
+    cursor: pointer;
+}
+
+button.send:after {
+    position: absolute;
+    content: attr(data-counter);
+    padding: 5px 8px;
+    margin: -29px 0 0 0;
+    line-height: 100%;
+    border: 2px #fff solid;
+    border-radius: 60px;
+    background: #00c09e;
+    transition: 0.1s linear;
+    -o-transition: 0.1s linear;
+    -ms-transition: 0.1s linear;
+    -moz-transition: 0.1s linear;
+    -webkit-transition: 0.1s linear;
+    opacity: 0;
+}
+
+button.send.selected:after {
+    opacity: 1;
+}
