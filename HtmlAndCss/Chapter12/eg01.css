@@ -61,6 +61,8 @@ h1 {
     font-size: .875em; /*15px/16px*/
 }
 
+
+
 /*------------开始自媒体查询----------------*/
 @media only screen and (min-width: 20em) {
     .nav-main li {
@@ -95,11 +97,58 @@ h1 {
         top: 41px;
         right: -3px;
     }
+
+    .com-logo {
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    .nav-main {
+        margin-top:0;
+    }
+
+    .post-photo {
+        float:left;
+        margin-bottom: 2px;
+        margin-right: 22px;
+        max-width: 61.667%;
+    }
+
+    .post-footer {
+        clear: left;
+    }
 }
 
+/*480px-767px*/
+@media only screen and (min-width: 30em) and (max-width: 47.9375em) {
+    .about {
+        overflow: hidden;
+    }
+    .about img {
+        float:left;
+        margin-right:15px;
+    }
+}
 
-@media only screen and (min-width: 480px) and (max-width: 776px) {
-
+/*768px*/
+@media only screen and (min-width: 48em) {
+    .container {
+        background:url(../Chapter11/img/bg.jpg) repeat-y 65.9375% 0;
+        padding-bottom: 1.875em;
+        overflow: hidden;
+    }
+    main {
+        float: left;
+        width: 62.5%; /*600px/960px*/
+    }
+    .sidebar {
+        float: right;
+        margin-top: 1.875em;
+        width: 31.25%; /*300px/960px*/
+    }
+    .nav-main {
+        margin-bottom: 0;
+    }
 }
 
 @media only screen and (orientation: landscape) {
