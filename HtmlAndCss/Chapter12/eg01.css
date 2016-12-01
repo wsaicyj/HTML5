@@ -17,8 +17,20 @@
  -moz-device-pixel-ratio（Mozilla设备像素比:Mozilla是Firefox等浏览器的基础程序。）
 */
 
+/*基准样式*/
+body {
+    font: 100%/1.2 Serif;
+    margin: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 .page {
+    margin: 0 auto;
     max-width: 60em;
 }
 
@@ -32,16 +44,76 @@ main {
     width: 31.25%;
 }
 
-p {
-    color: green;
+.nav-main ul, header ul {
+    list-style: none;
 }
 
+h1 {
+    font-size: 2.25em; /*36px/16px*/
+    font-weight: 300;
+}
 
-@media only screen and (min-width: 480px) {
-    p {
-        color: red;
-        font-weight: bold;
+.post-photo-full, .post-photo, .map {
+    max-width: 100%;
+}
+
+.about h2, .mod h2 {
+    font-size: .875em; /*15px/16px*/
+}
+
+/*------------开始自媒体查询----------------*/
+@media only screen and (min-width: 20em) {
+    .nav-main li {
+        border-left: 1px solid #c8c8c8;
+        display: inline-block;
+        text-align: left;
+    }
+
+    .nav-main li:first-child {
+        border-left: none;
+    }
+
+    .nav-main a {
+        display: inline-block;
+        font-size: 1em;
+        padding: .5em .9em .5em 1.15em;
+    }
+
+    .logo {
+        width: 1em;
+        height: 1em;
+    }
+}
+
+@media only screen and (min-width:30em) {
+    .masthead {
+        position: relative;
+    }
+
+    .social-site {
+        position: absolute;
+        top: 41px;
+        right: -3px;
     }
 }
 
 
+@media only screen and (min-width: 480px) and (max-width: 776px) {
+
+}
+
+@media only screen and (orientation: landscape) {
+
+}
+
+@media only print and (color) {
+
+}
+
+@media only print and (monochrome) {
+
+}
+
+@media only screen and (color), projection and (color) {
+
+}

@@ -7,8 +7,14 @@
     <link href="../normalize.css" rel="stylesheet"/>
     <!--media实现媒体查询-->
     <link href="eg01.css" rel="stylesheet" media="screen"/>
-    <!--仅当媒体类型为screen 且视觉区域最小宽度为480像素时，加载并使用styles-480.css 中的样式规则-->
-    <link rel="stylesheet" media="only screen and (min-width:480px)" href="styles-480.css" />
+    <!--仅当媒体类型为screen 且视觉区域最小宽度为480像素时，加载并使用eg01.css 中的样式规则-->
+    <link rel="stylesheet" media="only screen and (min-width:480px) and (max-width:767px)" href="eg01.css" />
+    <link rel="stylesheet" media="only screen and (min-width:20em)" href="eg01.css" />
+    <link rel="stylesheet" media="only screen and (orientation:landscape)" href="eg01.css" />
+    <link rel="stylesheet" media="only print and (color)" href="color-pages.css" />
+    <link rel="stylesheet" media="only print and (monochrome)" href="monochrome-pages.css" />
+    <link rel="stylesheet" media="only screen and (color),projection and (color)" href="eg01.css" />
+
 </head>
 <body>
 <div class="page">
@@ -24,11 +30,11 @@
         </ul>
 
         <nav role="navigation">
-            <ul class="nav-main current-page">
+            <ul class="nav-main">
                 <li><a href="#history">历史</a></li>
                 <li><a href="#resource">资源</a></li>
-                <li><a href="/">旅游指南</a></li>
-                <li><a href="/">旅游景点</a></li>
+                <li><a href="#guide">旅游指南</a></li>
+                <li><a href="#travel">旅游景点</a></li>
             </ul>
         </nav>
 
@@ -74,7 +80,7 @@
 
             <section class="post" id="travel">
                 <h1>旅游景点</h1>
-                <img />
+                <!--<img src="../Chapter11/img/town.jpg" />-->
                 <div class="post-blurb">
                     <h2>硇洲灯塔</h2>
                     <img class="post-photo" src="../Chapter11/img/town.jpg" />
@@ -116,7 +122,6 @@
         </div>
         <!-- ===结束附注栏=== -->
     </div>
-
 
 
     <!-- ===开始页脚=== -->
