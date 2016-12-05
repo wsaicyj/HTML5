@@ -1,0 +1,115 @@
+/*
+div {
+    background:#999;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    float: left;
+}
+
+.all-corners {
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.one-corners {
+    -webkit-border-top-left-radius: 75px;
+    border-radius-top-left-radius: 75px;
+}
+
+.elliptical-corners {
+    -webkit-border-radius: 50px / 20px;
+    border-radius: 50px / 20px;
+}
+
+.circle {
+    -webkit-border-radius: 70%;
+    border-radius: 70%;
+}
+
+
+p {
+    color: #222;
+    font-weight: bold;
+    font-size: 4.5em;
+    display: block;
+}
+
+.basic {
+    text-shadow: 3px 3px #aaa;
+}
+
+.basic-negative {
+    text-shadow: -4px -2px #ccc;
+}
+
+.blur {
+    text-shadow: 2px 2px 10px grey;
+}
+
+.blur-inversed {
+    color: white;
+    text-shadow: 2px 2px 10px #000;
+}
+
+.multiple {
+    text-shadow: 2px 2px white,6px 6px rgba(50,50,50,.25);
+}
+*/
+
+div {
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin: 10px;
+}
+
+.vertical-down {
+    background: silver;
+    background: linear-gradient(silver,black);
+}
+
+.vertical-up {
+    background: silver;
+    background: linear-gradient(to top,silver,black);
+}
+
+.horizontal-rt {
+    background: silver;
+    background: linear-gradient(to right,silver,black);
+}
+
+.horizontal-lt {
+    background: silver;
+    background: linear-gradient(to left,silver,black);
+}
+
+.diagonal-bot-rt {
+    background: aqua;
+    background: linear-gradient(to bottom right,aqua,navy);
+}
+
+.diagonal-bot-lt {
+    background: aqua;
+    background: linear-gradient(to bottom left,aqua,navy);
+}
+
+.diagonal-top-lt {
+    background: aqua;
+    background: linear-gradient(to top left,aqua,navy);
+}
+
+.diagonal-top-rt {
+    background: aqua;
+    background: linear-gradient(to top right,aqua,navy 70%,red);
+}
+
+.radial-center {
+    background: red;
+    background: radial-gradient(yellow,red);
+}
+
+.radial-top {
+    background: red;
+    background: radial-gradient(at top,yellow,red);
+}

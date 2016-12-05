@@ -44,9 +44,11 @@ main {
     width: 31.25%;
 }
 
-.nav-main ul, header ul {
+.nav-main,.social-site,.nav-main a,.social-site a{
     list-style: none;
+    text-decoration: none;
 }
+
 
 h1 {
     font-size: 2.25em; /*36px/16px*/
@@ -57,13 +59,45 @@ h1 {
     max-width: 100%;
 }
 
+.about {
+    /*background-color: #2b2b2b;*/
+    /*color: #ccc;*/
+    background-color: #ededed;
+    background-image: linear-gradient(#fff,#ededed);
+    border: 1px solid #d0d0d0;
+    margin: auto 5px;
+    padding: .3125em .625em .625em;
+    border-radius:10px;
+    -webkit-box-shadow: 0 0 5px #d0d0d0;
+    box-shadow: 0 0 5px #d0d0d0;
+    text-shadow: 2px 2px 10px grey;
+}
+
+.map {
+    border-radius: 15px;
+    border: 5px solid #bebebe;
+    background-clip: padding-box;
+    align-content: center;
+    margin: 0 auto;
+    /*opacity:1;*/
+}
+
 .about h2, .mod h2 {
     font-size: .875em; /*15px/16px*/
+}
+
+img {
+    opacity: .5;
+}
+
+img:hover {
+    opacity: 1;
 }
 
 
 
 /*------------开始自媒体查询----------------*/
+/*320px*/
 @media only screen and (min-width: 20em) {
     .nav-main li {
         border-left: 1px solid #c8c8c8;
@@ -87,6 +121,7 @@ h1 {
     }
 }
 
+/*480px*/
 @media only screen and (min-width:30em) {
     .masthead {
         position: relative;
@@ -133,7 +168,7 @@ h1 {
 /*768px*/
 @media only screen and (min-width: 48em) {
     .container {
-        background:url(../Chapter11/img/bg.jpg) repeat-y 65.9375% 0;
+        /*background:url(../Chapter11/img/bg.jpg) repeat-y 65.9375% 0;*/
         padding-bottom: 1.875em;
         overflow: hidden;
     }
