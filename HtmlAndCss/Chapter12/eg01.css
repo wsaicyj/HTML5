@@ -44,11 +44,13 @@ main {
     width: 31.25%;
 }
 
-.nav-main,.social-site,.nav-main a,.social-site a{
+.nav-main,.social-site{
     list-style: none;
-    text-decoration: none;
 }
 
+a {
+    text-decoration: none;
+}
 
 h1 {
     font-size: 2.25em; /*36px/16px*/
@@ -94,6 +96,9 @@ img:hover {
     opacity: 1;
 }
 
+.more:after {
+    content: ">>";
+}
 
 
 /*------------开始自媒体查询----------------*/
