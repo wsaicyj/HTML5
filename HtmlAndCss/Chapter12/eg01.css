@@ -44,7 +44,7 @@ main {
     width: 31.25%;
 }
 
-.nav-main,.social-site{
+.nav-main,.social-site,.area{
     list-style: none;
 }
 
@@ -88,17 +88,61 @@ h1 {
     font-size: .875em; /*15px/16px*/
 }
 
-img {
-    opacity: .5;
+.mod {
+    position: relative;
 }
 
-img:hover {
-    opacity: 1;
+.map:focus + .area,
+.map:hover + .area {
+    left: 50%;
+}
+
+/*气泡*/
+.area {
+    position: absolute;
+    background: #2b2b2b;
+    border-radius: 5px 5px;
+    left: -1999em; /*隐藏*/
+    margin-left: -111px;
+    padding: .5em 0 .9375em .9375em;
+    top: -95px;
+    width: 222px;
+    color: white;
+}
+
+/*气泡下的三角形*/
+.area:after {
+    position: absolute;
+    border: solid transparent;
+    border-top-color: #2b2b2b;
+    border-width: 15px;
+    content: " ";
+    left: 50%;
+    margin-left: -15px;
+    top: 99.9%;
+    width: 0;
+    height: 0;
 }
 
 .more:after {
     content: ">>";
 }
+
+/*清除浮动元素*/
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+/*清除浮动元素结束*/
 
 
 /*------------开始自媒体查询----------------*/
