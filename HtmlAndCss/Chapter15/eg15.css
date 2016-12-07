@@ -7,6 +7,16 @@ body {
     margin-bottom: 0;
 }
 
+.nav .subnav {
+    left: -999em;
+    position: absolute;
+    z-index: 1000;
+}
+
+.nav li:hover .subnav {
+    left: auto;
+}
+
 /*.hdg + ul,*/
 /*.hdg + ol {*/
     /*margin-top: .5em;*/
