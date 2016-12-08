@@ -1,0 +1,45 @@
+fieldset {
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    padding: 0 .625em; /*10px*/
+}
+
+.fields {
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    margin: .75em; /*12px*/
+    padding: .75em;
+}
+
+.fields .row {
+    margin: .5em 0;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 3px 6px;
+    text-align: right;
+    width: 150px;
+    vertical-align: top;
+}
+
+input {
+    font-size: inherit;
+}
+
+/*各种表单字段的宽度*/
+.field-small {
+    width: 75px;
+}
+
+.field-medium {
+    width: 150px;
+}
+
+.field-large {
+    width: 250px;
+}
