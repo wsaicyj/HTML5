@@ -14,6 +14,15 @@ fieldset {
     padding: .75em;
 }
 
+.hdr-account {
+    background-color: #1522c7;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    box-shadow: 3px 3px grey;
+    margin: .625em;
+}
+
 .fields .row {
     margin: .5em 0;
 }

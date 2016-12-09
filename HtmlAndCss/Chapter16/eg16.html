@@ -6,7 +6,7 @@
     <link href="eg16.css" rel="stylesheet" />
 </head>
 <body>
-<h1>Create a New Account</h1>
+<h1 class="hdr">Create a New Account</h1>
 <form method="post" action="../Chapter12/eg01.html">
     <fieldset>
         <h2 class="hdr-account">Account</h2>
@@ -19,8 +19,22 @@
                 <label for="last-name">LastName:</label>
                 <input type="text" id="last-name" name="last-name" class="field-large" />
             </p>
+            <p class="row">
+                <label>Email:</label>
+                <input type="email" id="email" name="email" class="field-large" placeholder="yourname@example.com" />
+            </p>
+            <p class="row">
+                <label for="pwd">Password:</label>
+                <input type="password" id="pwd" name="pwd" class="field-large" required />
+            </p>
+             <p class="row">
+                <label for="re-pwd">Re-enter password:</label>
+                <input type="password" id="re-pwd" name="pwd" class="field-large" required />
+            </p>
         </div>
     </fieldset>
+
+
     <input type="submit" value="提交" class="btn" />
 </form>
 </body>
