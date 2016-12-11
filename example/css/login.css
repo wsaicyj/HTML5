@@ -1,0 +1,78 @@
+body {
+    font: 100%/1.2 Serif;
+    margin: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.login {
+    max-width: 30em;  /* 560px */
+    margin: 10% auto 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    overflow: hidden;
+}
+
+fieldset {
+    border: none;
+    /*margin-bottom: 12px;*/
+    overflow: hidden;
+    padding: .625px;
+}
+
+.fields {
+    margin: .75em auto;
+    padding: .75em;
+}
+
+.fields .row {
+    margin: .5em 0;
+}
+
+label {
+    display: inline-block;
+    width:150px;
+    /*border: 1px solid red;*/
+    text-align: right;
+    padding: 3px 6px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    /*padding: 0em 1em;*/
+    /*font-size: 1.1em;*/
+    /*color: #fff;*/
+}
+
+input {
+    font-size: inherit;
+    text-indent: 5px;
+}
+
+input:focus {
+    background: #FAFFBD;
+}
+
+.field-large {
+    width: 250px;
+}
+
+
+.btn {
+    background-color: #da820a;
+    color: #fff;
+    border: none;
+    text-shadow: 1px 1px 0 #777;
+    box-shadow: 2px 2px 2px #333;
+    margin: 0 0 20px 165px;
+    border-radius: 4px;
+    padding: 8px;
+    cursor: pointer;
+}

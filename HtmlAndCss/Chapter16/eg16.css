@@ -1,3 +1,4 @@
+
 fieldset {
     background-color: #f1f1f1;
     border: none;
@@ -14,13 +15,60 @@ fieldset {
     padding: .75em;
 }
 
+.radios {
+    background-color: transparent;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.radios .row-radio {
+    margin: 0 0 0 150px;
+}
+
+.radios legend {
+    position: absolute;
+    left: 0;
+    padding: 0 6px;
+    text-align: right;
+    top: 2px;
+    width: 148px;
+}
+
+.radios label {
+    padding-left: 2px;
+    margin-right: 5px;
+    vertical-align: top;
+    width: auto;
+}
+
+h2 {
+    background-color: #dedede;
+    color: #fff;
+    font-size: 1.1em;
+    margin: .75em;
+    padding: .3em 1em;
+    box-shadow: 3px 3px 3px #ccc;
+    border-radius: 5px;
+    text-shadow: #9FBEB9 1px 1px 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #d4d4d4;
+    border-top: 1px solid #d4d4d4;
+}
+
 .hdr-account {
-    background-color: #1522c7;
-    color: white;
-    font-weight: bold;
-    border-radius: 3px;
-    box-shadow: 3px 3px grey;
-    margin: .625em;
+    background-color: #0b5584;
+}
+
+.hdr-address {
+    background-color: #4494c9;
+}
+
+.hdr-profile {
+    background-color: #377d87;
+}
+
+.hdr-emails {
+    background-color: #717f88;
 }
 
 .fields .row {
@@ -34,10 +82,68 @@ label {
     text-align: right;
     width: 150px;
     vertical-align: top;
+    /*border: 1px solid red;*/
+}
+
+.checkbox label {
+    text-align: left;
+    width: 475px;
+
 }
 
 input {
     font-size: inherit;
+    text-indent: 5px;
+}
+
+input:focus,textarea:focus {
+    background-color: #FAFFBD;
+}
+
+input:checked + label {
+    color: green;
+}
+
+input[type="email"]:invalid {
+    color: red;
+}
+
+input[type="email"]:valid {
+    color: blue;
+}
+
+/*input:required,textarea:required {*/
+    /*border: 2px solid red;*/
+/*}*/
+
+select {
+    font-size: inherit;
+}
+
+.bio {
+    row: 50;
+}
+
+.btn {
+    background-color: #da820a;
+    color: #fff;
+    border: none;
+    box-shadow: 2px 2px 2px #333;
+    text-shadow: 1px 1px 0 #777;
+    margin: 12px 0 0 26px;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.instructions {
+    margin-left: 165px;
+}
+
+textarea {
+    font: inherit;
+    padding: 2px;
+    resize: none;
 }
 
 /*各种表单字段的宽度*/
@@ -51,4 +157,8 @@ input {
 
 .field-large {
     width: 250px;
+}
+
+.required {
+    color: red;
 }
