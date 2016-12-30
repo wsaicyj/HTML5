@@ -7,31 +7,27 @@
     <title>登录界面</title>
     <!-- Bootstrap -->
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/tenantLogin.css" rel="stylesheet" />
+    <link href="css/tenantLogin.css" rel="stylesheet"/>
     <!-- 如果要使用Bootstrap的JS插件，则必须引入jQuery
     <script src="https://code.jquery.com/jquery.js"></script>-->
-    <script src="../dist/js/jquery.min.js"></script>
-    <!-- Bootstrap的JS插件 -->
-    <script src="../dist/js/bootstrap.js"></script>
+
+
 </head>
 <body class="form-bg">
-<div class="container box">
+<div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <form class="form-horizontal">
+            <form class="form-horizontal" role="form" id="defaultForm" method="post">
                 <span class="heading">多租户登录</span>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="user-name" id="user_name" placeholder="用户名" />
-                    <i class="fa fa-user"></i>
+                    <input type="text" class="form-control" name="user-name" id="user_name" placeholder="用户名"/>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="密码" >
-                    <i class="fa fa-lock"></i>
-                    <a class="fa fa-question-circle" href="#"></a>
+                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="密码">
                 </div>
                 <div class="form-group">
                     <div class="main-checkbox">
-                        <input type="checkbox" value="None" id="remember" name="remember" >
+                        <input type="checkbox" value="None" id="remember" name="remember">
                         <label for="remember"></label>
                     </div>
                     <span class="text">记住我</span>
@@ -41,5 +37,22 @@
         </div>
     </div>
 </div>
+
+<!-- Bootstrap的JS插件 -->
+<script src="../dist/js/bootstrap.js"></script>
+<script src="../dist/js/formValidation.js.js"></script>
+<script src="../dist/js/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#defaultForm').formValidation({
+            message:'This value is not valid',
+            icon: {
+                valid:'gly'
+            }
+
+        })
+    });
+
+</script>
 </body>
 </html>
