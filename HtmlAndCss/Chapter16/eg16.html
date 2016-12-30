@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>创建表单</title>
+    <!--<link href="../dist/css/formValidation.css" rel="stylesheet" >-->
+    <!--<link href="../dist/css/bootstrap.min.css" rel="stylesheet" />-->
     <link href="eg16.css" rel="stylesheet"/>
 </head>
 <body>
 <h1 class="hdr">Create a New Account</h1>
-<form method="post" action="../Chapter12/eg01.html" enctype="multipart/form-data">
+<form method="post" action="../Chapter12/eg01.html" enctype="multipart/form-data" role="form" id="defaultForm">
 
     <input type="hidden" name="step" value="6" />
 
@@ -16,7 +18,7 @@
         <div class="fields">
             <p class="row">
                 <label for="first-name">FirstName<span class="required">*</span>:</label>
-                <input type="text" id="first-name" name="first_name" class="field-large" autofocus required
+                <input type="text" id="first-name" name="first_name" class="field-large" autofocus
                        aria-required="true"/>
             </p>
             <p class="row">
@@ -30,11 +32,11 @@
             </p>
             <p class="row">
                 <label for="pwd">Password<span class="required">*</span>:</label>
-                <input type="password" id="pwd" name="pwd" class="field-large" required/>
+                <input type="password" id="pwd" name="pwd" class="field-large"/>
             </p>
             <p class="row">
                 <label for="re-pwd">Re-enter password<span class="required">*</span>:</label>
-                <input type="password" id="re-pwd" name="pwd" class="field-large" required/>
+                <input type="password" id="re-pwd" name="pwd" class="field-large"/>
             </p>
         </div>
     </fieldset>
@@ -135,5 +137,6 @@
     <input type="reset" value="重置" class="btn" />
     <!--<button type="submit" class="btn"><img src="../Chapter11/img/1.gif" width="21" height="21" alt="" /> 提交</button>-->
 </form>
+
 </body>
 </html>
