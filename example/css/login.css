@@ -58,6 +58,17 @@ input {
 
 input:focus {
     background: #FAFFBD;
+    outline: 0;
+}
+
+input:focus:invalid {
+    border: 1px solid #F5192F;
+    box-shadow: 0 0 4px #F5192F;
+}
+
+input:focus:valid {
+    border: 1px solid #64C364;
+    box-shadow: 0 0 4px #64C364;
 }
 
 .field-large {
@@ -76,3 +87,4 @@ input:focus {
     padding: 8px;
     cursor: pointer;
 }
+
