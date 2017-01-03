@@ -1,6 +1,8 @@
 body {
     font: 100%/1.2 Serif;
     margin: 0;
+    background:url(../../img/login_bg_0.jpg) #f8f6e9 0 0 no-repeat;
+    background-size: cover;
 }
 
 * {
@@ -9,82 +11,68 @@ body {
     box-sizing: border-box;
 }
 
-.login {
-    max-width: 30em;  /* 560px */
-    margin: 10% auto 0 auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f1f1f1;
-    overflow: hidden;
+
+.sign {
+    width: 477px;
+    height: 479px;
+    background:url(../../img/login_bg.png) no-repeat;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -239px;
+    margin-left: -238px;
 }
 
-fieldset {
-    border: none;
-    /*margin-bottom: 12px;*/
-    overflow: hidden;
-    padding: .625px;
+.sign-head {
+    margin: 0 auto;
+    padding-top: 30px;
+    width: 120px;
 }
 
-.fields {
-    margin: .75em auto;
-    padding: .75em;
+.form-sign {
+    max-width: 330px;
+    padding: 43px 15px 15px 15px;
+    margin: 0 auto;
 }
 
-.fields .row {
-    margin: .5em 0;
+.form-sign .checkbox {
+    margin-bottom: 10px;
+    font-weight: normal;
 }
 
-label {
-    display: inline-block;
-    width:150px;
-    /*border: 1px solid red;*/
-    text-align: right;
-    padding: 3px 6px;
-    vertical-align: top;
-    cursor: pointer;
+.form-sign .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
 }
 
-h2 {
-    text-align: center;
-    /*padding: 0em 1em;*/
-    /*font-size: 1.1em;*/
-    /*color: #fff;*/
+.form-sign .form-control:focus {
+    z-index: 2;
 }
 
-input {
-    font-size: inherit;
-    text-indent: 5px;
-}
-
-input:focus {
-    background: #FAFFBD;
-    outline: 0;
-}
-
-input:focus:invalid {
-    border: 1px solid #F5192F;
-    box-shadow: 0 0 4px #F5192F;
-}
-
-input:focus:valid {
-    border: 1px solid #64C364;
-    box-shadow: 0 0 4px #64C364;
-}
-
-.field-large {
-    width: 250px;
-}
-
-
-.btn {
-    background-color: #da820a;
+.form-sign input[type="text"] {
+    margin-bottom: 14px;
+    border-radius: 0;
+    background: url(../../img/login_user.png) 0 0 #bdbdbd no-repeat;
+    padding-left:60px;
     color: #fff;
-    border: none;
-    text-shadow: 1px 1px 0 #777;
-    box-shadow: 2px 2px 2px #333;
-    margin: 0 0 20px 165px;
-    border-radius: 4px;
-    padding: 8px;
-    cursor: pointer;
 }
 
+.form-sign input[type="password"]{
+    margin-bottom: 10px;
+    border-radius: 0;
+    background: url(../../img/login_pas.png) 0 0 #bdbdbd no-repeat;
+    padding-left: 60px;
+    color: #fff;
+}
+
+.form-sign button {
+    border-radius: 0;
+    margin-bottom: 10px;
+}
+
+.form-sign input[type="text"]:focus:invalid {
+    border: 1px solid red;
+}
