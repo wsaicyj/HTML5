@@ -32,12 +32,12 @@ body {
 
 .form-sign {
     max-width: 330px;
-    padding: 43px 15px 15px 15px;
+    padding: 35px 15px 15px 15px;
     margin: 0 auto;
 }
 
 .form-sign .checkbox {
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
     font-weight: normal;
 }
 
@@ -53,26 +53,26 @@ body {
 }
 
 .form-sign input[type="text"] {
-    margin-bottom: 14px;
+    /*margin-bottom: 14px;*/
     border-radius: 0;
-    background: url(../../img/login_user.png) 0 0 #bdbdbd no-repeat;
+    background: url(../../img/login_user.png) 0 0 #fff no-repeat;
     padding-left:60px;
     color: #fff;
 }
 
 .form-sign input[type="password"]{
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
     border-radius: 0;
-    background: url(../../img/login_pas.png) 0 0 #bdbdbd no-repeat;
+    background: url(../../img/login_pas.png) 0 0 #fff no-repeat;
     padding-left: 60px;
     color: #fff;
 }
 
 .form-sign button {
     border-radius: 0;
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
 }
 
-.form-sign input[type="text"]:focus:invalid {
-    border: 1px solid red;
+.form-sign input[type="checkbox"] {
+    margin-right: 5px;
 }
