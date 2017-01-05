@@ -30,8 +30,6 @@
                 <input name="agree" type="checkbox" value="remember-me"/>记住我
             </label>
         </div>
-
-
     </form>
 </div>
 
@@ -41,7 +39,6 @@
 <script src="../dist/js/bootstrap_formValidation.js" type="text/javascript"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-
 	    $('#defaultForm').formValidation({
 	        message: 'This value is not valid',
 	        icon: {
@@ -54,7 +51,7 @@
 	                message: 'The username is not valid',
 	                validators: {
 	                    notEmpty: {
-	                        message: '用户名必须设置'
+	                        message: '用户名不能为空'
 	                    },
 	                    stringLength: {
 	                        min: 6,
@@ -75,13 +72,6 @@
 	                    different: {
 	                        field: 'username',
 	                        message: '密码不能和用户名相同'
-	                    }
-	                }
-	            },
-	            agree: {
-	                validators: {
-	                    notEmpty: {
-	                        message: 'You must agree with the terms and conditions'
 	                    }
 	                }
 	            }

@@ -55,7 +55,7 @@ body {
 .form-sign input[type="text"] {
     /*margin-bottom: 14px;*/
     border-radius: 0;
-    background: url(../../img/login_user.png) 0 0 #fff no-repeat;
+    background: url(../../img/login_user.png) 0 0 #ccc no-repeat;
     padding-left:60px;
     color: #fff;
 }
@@ -63,7 +63,7 @@ body {
 .form-sign input[type="password"]{
     /*margin-bottom: 10px;*/
     border-radius: 0;
-    background: url(../../img/login_pas.png) 0 0 #fff no-repeat;
+    background: url(../../img/login_pas.png) 0 0 #ccc no-repeat;
     padding-left: 60px;
     color: #fff;
 }

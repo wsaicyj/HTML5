@@ -1,7 +1,7 @@
 body {
-    font: 100%/1.2 Seriaf;
+    font: 100%/1.2 serif;
     margin: 0;
-    background: url(../../img/2.jpg) #ccc no-repeat;
+    background:url(../../img/2.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -12,19 +12,57 @@ body {
 }
 
 .sign {
-    width: 477px;
-    height: 479px;
-    border: 1px solid red;
+    width: 520px;
+    height: 410px;
+    border: 1px solid #ccc;
     margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
     margin-top: -238px;
     margin-left: -239px;
+    box-shadow: 0px 1px 3px #ccc;
+    background: #fff;
 }
 
 .form-sign {
     max-width: 330px;
-    padding: 43px 15px 15px 15px;
+    padding: 40px 15px 15px 15px;
     margin: 0 auto;
+}
+
+.form-header {
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.form-sign .form-control {
+    position: relative;
+    height: 36px;
+    font-size: 16px;
+    padding:10px;
+}
+
+.form-sign input[type="text"] {
+    background: url(../../img/tc_login_yonghu.jpg) no-repeat;
+    padding-left: 40px;
+}
+
+.form-sign input[type="text"]:focus {
+    background: url(../../img/tc_login_yonghu2.jpg) no-repeat;
+    padding-left: 40px;
+}
+
+.form-sign input[type="password"] {
+    background: url(../../img/tc_login_mima.jpg) 0 0 no-repeat;
+    padding-left: 40px;
+}
+
+.form-sign input[type="password"]:focus {
+    background: url(../../img/tc_login_mima2.jpg) 0 0 no-repeat;
+    padding-left: 40px;
+}
+
+.form-sign input[type="checkbox"] {
+    margin-right: 5px;
 }
