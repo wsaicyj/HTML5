@@ -1,0 +1,36 @@
+body {
+    font: 100%/1.2 Courier;
+}
+
+table {
+    border-collapse: collapse;
+    /*border: 1px solid #000;*/
+}
+
+caption {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: .5em;
+
+}
+
+th,td {
+    font-size: 1em;
+    padding: .5em .75em;
+    border: 1px solid #000;
+}
+
+td {
+    /*border: 1px solid #000;*/
+    background: #ccc;
+}
+
+th {
+    /*border: 1px solid #000;*/
+    background: #8c8c8c;
+}
+
+tfoot {
+    font-style: italic;
+    font-weight:bold;
+}
