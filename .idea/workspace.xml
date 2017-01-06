@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0e133ae-4ca1-45d1-9d34-532fc2926ac7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HtmlAndCss/nzd.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HtmlAndCss/nzd.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/css/gototop.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/js/jquery.gototop.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dist/js/jquery.gototop.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HtmlAndCss/Chapter12/eg01.html" afterPath="$PROJECT_DIR$/HtmlAndCss/Chapter12/eg01.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example/sign.html" afterPath="$PROJECT_DIR$/example/sign.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HtmlAndCss/nzd.html" afterPath="$PROJECT_DIR$/HtmlAndCss/nzd.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,8 +31,8 @@
       <file leaf-file-name="nzd.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HtmlAndCss/nzd.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="170" column="13" lean-forward="true" selection-start-line="170" selection-start-column="13" selection-end-line="170" selection-end-column="13" />
+            <state relative-caret-position="1830">
+              <caret line="177" column="8" lean-forward="true" selection-start-line="177" selection-start-column="8" selection-end-line="177" selection-end-column="8" />
               <folding>
                 <element signature="e#7339#7345#0" expanded="true" />
               </folding>
@@ -60,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/dist/css/gototop.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
-              <caret line="92" column="8" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
+              <caret line="92" column="8" lean-forward="false" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -90,7 +84,7 @@
         <entry file="file://$PROJECT_DIR$/example/login.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-475">
-              <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+              <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -625,7 +619,7 @@
       <workItem from="1481796516057" duration="14000" />
       <workItem from="1481796649718" duration="87000" />
       <workItem from="1481796790339" duration="31000" />
-      <workItem from="1483069531583" duration="63212000" />
+      <workItem from="1483069531583" duration="63396000" />
     </task>
     <task id="LOCAL-00001" summary="bootstrapValidator">
       <created>1483094035696</created>
@@ -648,11 +642,18 @@
       <option name="project" value="LOCAL" />
       <updated>1483612481346</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="nzd-01">
+      <created>1483699841377</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1483699841377</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63495000" />
+    <option name="totallyTimeSpent" value="63679000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -672,7 +673,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23645681" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23645681" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328594" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -699,7 +700,8 @@
     <MESSAGE value="bootstrapValidator" />
     <MESSAGE value="example-sign" />
     <MESSAGE value="example-sign(02)" />
-    <option name="LAST_COMMIT_MESSAGE" value="example-sign(02)" />
+    <MESSAGE value="nzd-01" />
+    <option name="LAST_COMMIT_MESSAGE" value="nzd-01" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1009,7 +1011,7 @@
     <entry file="file://$PROJECT_DIR$/example/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-475">
-          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <caret line="26" column="14" lean-forward="false" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1065,15 +1067,15 @@
     <entry file="file://$PROJECT_DIR$/dist/css/gototop.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="92" column="8" lean-forward="true" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
+          <caret line="92" column="8" lean-forward="false" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HtmlAndCss/nzd.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="170" column="13" lean-forward="true" selection-start-line="170" selection-start-column="13" selection-end-line="170" selection-end-column="13" />
+        <state relative-caret-position="1830">
+          <caret line="177" column="8" lean-forward="true" selection-start-line="177" selection-start-column="8" selection-end-line="177" selection-end-column="8" />
           <folding>
             <element signature="e#7339#7345#0" expanded="true" />
           </folding>
