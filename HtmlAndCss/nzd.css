@@ -1,0 +1,243 @@
+/* 媒体查询里的媒体特性 */
+/*
+ width（宽度）
+ height（高度）
+ device-width（设备宽度）
+ device-height（设备高度）
+ orientation（方向）
+ aspect-ratio（高宽比）
+ device-aspect-ratio（设备高宽比）
+ color（颜色）
+ color-index（颜色数）
+ monochrome（单色）
+ resolution（分辨率）
+ scan（扫描）
+ grid（栅格）
+   -webkit-device-pixel-ratio（WebKit设备像素比:WebKit是Chrome、Safari等浏览器使用的网页引擎和JavaScript引擎开源程序）
+ -moz-device-pixel-ratio（Mozilla设备像素比:Mozilla是Firefox等浏览器的基础程序。）
+*/
+
+/*基准样式*/
+body {
+    font: 100%/1.2 Serif;
+    margin: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.page {
+    margin: 0 auto;
+    max-width: 60em;
+}
+
+main {
+    /* 要求宽度/包含块宽度使用600px/960px */
+    width: 62.5%;
+}
+
+/*.navbar-nav {*/
+    /*margin:0;*/
+/*}*/
+
+.sidebar {
+    /* 300px/960px */
+    width: 31.25%;
+}
+
+.nav-main,.social-site,.area{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2.25em; /*36px/16px*/
+    font-weight: 300;
+}
+
+.post-photo-full, .post-photo, .map {
+    max-width: 100%;
+}
+
+.about {
+    /*background-color: #2b2b2b;*/
+    /*color: #ccc;*/
+    background-color: #ededed;
+    background-image: linear-gradient(#fff,#ededed);
+    border: 1px solid #d0d0d0;
+    margin: auto 5px;
+    padding: .3125em .625em .625em;
+    border-radius:10px;
+    -webkit-box-shadow: 0 0 5px #d0d0d0;
+    box-shadow: 0 0 5px #d0d0d0;
+    text-shadow: 2px 2px 10px grey;
+}
+
+.map {
+    border-radius: 15px;
+    border: 5px solid #bebebe;
+    background-clip: padding-box;
+    align-content: center;
+    margin: 0 auto;
+    /*opacity:1;*/
+}
+
+.about h2, .mod h2 {
+    font-size: .875em; /*15px/16px*/
+}
+
+.mod {
+    position: relative;
+}
+
+.map:focus + .area,
+.map:hover + .area {
+    left: 50%;
+}
+
+/*气泡*/
+.area {
+    position: absolute;
+    background: #2b2b2b;
+    border-radius: 5px 5px;
+    left: -1999em; /*隐藏*/
+    margin-left: -111px;
+    padding: .5em 0 .9375em .9375em;
+    top: -95px;
+    width: 222px;
+    color: white;
+}
+
+/*气泡下的三角形*/
+.area:after {
+    position: absolute;
+    border: solid transparent;
+    border-top-color: #2b2b2b;
+    border-width: 15px;
+    content: " ";
+    left: 50%;
+    margin-left: -15px;
+    top: 99.9%;
+    width: 0;
+    height: 0;
+}
+
+.more:after {
+    content: ">>";
+}
+
+/*清除浮动元素*/
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+/*清除浮动元素结束*/
+
+
+/*------------开始自媒体查询----------------*/
+/*320px*/
+@media only screen and (min-width: 20em) {
+    .nav-main li {
+        border-left: 1px solid #c8c8c8;
+        display: inline-block;
+        text-align: left;
+    }
+
+    .nav-main li:first-child {
+        border-left: none;
+    }
+
+    .nav-main a {
+        display: inline-block;
+        font-size: 1em;
+        padding: .5em .9em .5em 1.15em;
+    }
+
+    .logo {
+        width: 1em;
+        height: 1em;
+    }
+}
+
+/*480px*/
+@media only screen and (min-width:30em) {
+    .masthead {
+        position: relative;
+    }
+
+    .social-site {
+        position: absolute;
+        top: 41px;
+        right: -3px;
+    }
+
+    .com-logo {
+        margin-bottom: 8px;
+        text-align: left;
+        font-size: 3em;
+        font-weight: bold;
+    }
+
+    .nav-main {
+        margin-top:0;
+    }
+
+    .post-photo {
+        float:left;
+        margin-bottom: 2px;
+        margin-right: 22px;
+        max-width: 61.667%;
+    }
+
+    .post-footer {
+        clear: left;
+    }
+}
+
+/*480px-767px*/
+@media only screen and (min-width: 30em) and (max-width: 47.9375em) {
+    .about {
+        overflow: hidden;
+    }
+    .about img {
+        float:left;
+        margin-right:15px;
+    }
+}
+
+/*768px*/
+@media only screen and (min-width: 48em) {
+    .main-container {
+        /*background:url(../Chapter11/img/bg.jpg) repeat-y 65.9375% 0;*/
+        padding-bottom: 1.875em;
+        overflow: hidden;
+    }
+    main {
+        float: left;
+        width: 62.5%; /*600px/960px*/
+    }
+    .sidebar {
+        float: right;
+        margin-top: 1.875em;
+        width: 31.25%; /*300px/960px*/
+    }
+    .nav-main {
+        margin-bottom: 0;
+    }
+}
+
