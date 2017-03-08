@@ -12,7 +12,7 @@ class SkierClass(pygame.sprite.Sprite):
     def __init__(self):
         # 初始化
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load('\\pic\\skier_down.png')
+        self.image = pygame.image.load('/pic/skier_down.png')
         self.rect = self.image.get_rect()
         self.rect.center = [320, 100]
         self.angle = 0
@@ -58,7 +58,7 @@ class ObstacleClass(pygame.sprite.Sprite):
         '''让场景向上滚'''
         self.rect.centerY = self.location[1] - t_ptr
 
-    def create_map(self, start, end):
+    def create_map(start, end):
         '''创建一个窗口，包含随机的树和小旗'''
         obstacles = pygame.sprite.Group()
         gates = pygame.sprite.Group()
@@ -78,13 +78,6 @@ class ObstacleClass(pygame.sprite.Sprite):
                 obstacles.add(obstacle)
         return obstacles
 
-    def animate():
-        '''有移动时重绘屏幕'''
-        screen.fill([255, 255, 255])
-        pygame.display.update(obstacles.draw(screen))
-        screen.blit(skier.image,skier.rect)
-        screen.blit(core_text,[10,10])
-        pygame.display.flip()
 
     def updateObstacleGroup(map0,map1):
         '''切换到场景的下一屏'''
@@ -108,6 +101,14 @@ class ObstacleClass(pygame.sprite.Sprite):
     obstacles = updateObstacleGroup(map0,map1)
     font = pygame.font.Font(None,50)
 
+    def animate(self):
+        '''有移动时重绘屏幕'''
+        self.screen.fill([255, 255, 255])
+        pygame.display.update(self.obstacles.draw(self.screen))
+        self.screen.blit(self.skier.image, self.skier.rect)
+        self.screen.blit(self.score_text, [10, 10])
+        pygame.display.flip()
+
     while True:
         clock.tick(30) #每秒更新30次图形
         for event in pygame.event.get():
@@ -122,4 +123,42 @@ class ObstacleClass(pygame.sprite.Sprite):
         skier.move(speed) #移动滑雪者
         map_postion += speed[1] #滚动场景
 
+        #从一个场景的窗口切换到另一个场景窗口
+        if map_postion >= 640 and activeMap == 0:
+            activeMap = 1
+            map0 = create_map(20,29)
+            obstacles = updateObstacleGroup(map0,map1)
+        if map_postion >= 1280 and activeMap == 1:
+            activeMap = 0
+            for ob in map0:
+                ob.location[1] = ob.location[1] - 1280
+            map_postion = map_postion - 1280
+            map1 = create_map(10,19)
+            obstacles = updateObstacleGroup(map0,map1)
+
+
+        for obstacle in obstacles:
+            obstacle.scroll(map_postion)
+
+
+        #检查是否碰到小树或小旗
+        hit = pygame.sprite.spritecollide(skier,obstacles,False)
+        if hit:
+            if hit[0].type == 'tree' and not hit[0].passed:
+                points = points - 100
+                skier.image = pygame.image.load('\\pic\\skier_crash.png')
+                animate()
+                pygame.time.delay(100)
+                skier.image = pygame.image.load('\\pic\\skier_down.png')
+                skier.angle = 0
+                speed = [0,6]
+                hit[0].passed = True
+            elif hit[0].type == 'flag' and not hit[0].passed:
+                points += 10
+                obstacles.remove(hit[0])
+
+
+        #显示得分
+        score_text = font.render('Score:' + str(points),1(0,0,0))
+        animate()
 
