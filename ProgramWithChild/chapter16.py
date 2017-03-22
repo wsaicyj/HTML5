@@ -34,13 +34,23 @@ screen.fill([255,255,255])
 # pygame.draw.lines(screen,[0,0,0],False,plotPoints,3)
 # pygame.draw.rect(screen,[0,0,0],[x,y,1,1],1)
 my_skier = pygame.image.load("skier_crash.png")
-screen.blit(my_skier,[50,50])
+x = 50
+y = 50
+speed = 10
+screen.blit(my_skier,[x,y])
 pygame.display.flip()
-pygame.time.delay(2000)
-screen.blit(my_skier,[150,50])
-pygame.display.flip()
+# for i in range(1,10):
+#     pygame.time.delay(2000)
+#     pygame.draw.rect(screen,[255,255,255],[x,50,70,70])
+#     x += 100
+#     screen.blit(my_skier,[x,50])
+#     pygame.display.flip()
 
 while True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
+    pygame.time.delay(20)
+    pygame.draw.rect(screen,[255,255,255],[x,y,90,90])
+    if x > screen.get_width() - 90 or x < 0:
+        pass
