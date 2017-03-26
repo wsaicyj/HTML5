@@ -36,7 +36,8 @@ screen.fill([255,255,255])
 my_skier = pygame.image.load("skier_crash.png")
 x = 50
 y = 50
-speed = 10
+x_speed = 10
+y_speed = 10
 screen.blit(my_skier,[x,y])
 pygame.display.flip()
 # for i in range(1,10):
@@ -45,6 +46,8 @@ pygame.display.flip()
 #     x += 100
 #     screen.blit(my_skier,[x,50])
 #     pygame.display.flip()
+print(screen.get_width())
+print(screen.get_height())
 
 while True:
     for event in pygame.event.get():
@@ -52,5 +55,13 @@ while True:
             sys.exit()
     pygame.time.delay(20)
     pygame.draw.rect(screen,[255,255,255],[x,y,90,90])
-    if x > screen.get_width() - 90 or x < 0:
-        pass
+    x += x_speed
+    # y += y_speed
+    # if x > screen.get_width() - 90 or x < 0:
+        # x_speed = -x_speed
+    # if y > screen.get_height() - 90 or y < 0:
+    #     y_speed = -y_speed
+    if x > screen.get_width():
+        x = 0
+    screen.blit(my_skier,[x,y])
+    pygame.display.flip()
