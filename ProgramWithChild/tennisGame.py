@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import pygame,sys,random
+import pygame,sys,random,os
 
 # class Tennis(pygame.sprite.Sprite):
 #     '''球类定义'''
@@ -120,11 +120,13 @@ class Tennis(pygame.sprite.Sprite):
         self.rect = self.rect.move(self.speed)
         if self.rect.left < 0 or self.rect.right > width:  #碰到左右两边反转
             self.speed[0] = -self.speed[0]
+            hit_wall.play()
 
         if self.rect.top < 0:     #碰到上方反转
             score += 100
             score_text = font.render('Score:%s' % score, 1, [0, 255, 0])
             self.speed[1] = -self.speed[1]
+            get_point.play()
 
 
 class Racket(pygame.sprite.Sprite):
@@ -140,10 +142,12 @@ class Racket(pygame.sprite.Sprite):
 
 
 pygame.init()
+pygame.mixer.init()
 size = width, height = [640, 480]
 screen = pygame.display.set_mode(size)
 background = pygame.Surface(screen.get_size())
 background.fill([255, 255, 255])
+pygame.time.delay(1000)
 tennis_image = 'tennis.jpg'
 tennis_speed = [random.choice([-4, 4]), random.choice([-4, 4])]
 tennis_location = [320, 50]
@@ -159,13 +163,29 @@ score_location = [10,10]    #得分显示位置
 score_text = font.render('Score:%s' % score, 1, [0, 255, 0])
 lives = 3    #生命数
 lives_location = [320,10]     #生命数显示位置
-# lives_text = font.render('Score:%s' % lives, 1, [255, 0, 0])
 done = False
+sounds_path = os.path.join(os.getcwd(), 'sounds')
+hit_racket_sound = sounds_path + '\hit_paddle.wav'   #球碰到球拍的声音
+hit_racket = pygame.mixer.Sound(hit_racket_sound)
+hit_racket.set_volume(0.1)
+hit_wall_sound = sounds_path + '\hit_wall.wav'   #球碰到两边墙的声音
+hit_wall = pygame.mixer.Sound(hit_wall_sound)
+hit_wall.set_volume(0.2)
+get_point_sound = sounds_path + '\get_point.wav'  #得分的声音
+get_point = pygame.mixer.Sound(get_point_sound)
+get_point.set_volume(0.3)
+new_life_sound = sounds_path + r'\new_life.wav'    #新生命的声音
+new_life = pygame.mixer.Sound(new_life_sound)
+new_life.set_volume(0.4)
+game_over_sound = sounds_path + '\game_over.wav'   #游戏结束的声音
+game_over = pygame.mixer.Sound(game_over_sound)
+game_over.set_volume(0.4)
+
 
 
 
 while 1:
-    clock.tick(30)
+    clock.tick(50)
     screen.blit(background, [0, 0])
 
     for event in pygame.event.get():
@@ -175,7 +195,9 @@ while 1:
             racket.rect.centerx = event.pos[0]
 
     if pygame.sprite.spritecollide(racket, tennis_group, False):     #检测球是否碰撞到球拍
+        hit_racket.play()
         tennis.speed[1] = -tennis.speed[1]
+
 
     tennis.move()
 
@@ -191,6 +213,8 @@ while 1:
     if tennis.rect.top >= screen.get_rect().bottom:  #如果球碰到底边就减一条命
         lives -= 1
         if lives == 0:
+            if not done:
+                game_over.play()
             final_text1 = 'Game Over'
             final_text2 = 'Your final score is: %s' % str(score)
             ft1_surf = font.render(final_text1, 1, [255, 0, 0])
@@ -201,6 +225,8 @@ while 1:
             done = True
         else:
             pygame.time.delay(2000)
+            new_life.play()
             tennis.rect.topleft = [50, 50]
+
 
 
